@@ -1,6 +1,3 @@
-# Resumelytics
-# Resumelytics
-
 **A smart and user-friendly resume analyzer, reviewer, and builder.**
 
 ## Project Overview
