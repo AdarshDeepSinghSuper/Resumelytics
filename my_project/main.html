@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #7d2ae8, #5b13b9);
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .main-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .main-button {
+      background-color: white;
+      color: #7d2ae8;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .main-button:hover {
+      transform: scale(1.05);
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Welcome to the Main Page</h1>
+    <p>Click below to go to the Login/Signup Page:</p>
+    <button class="main-button" onclick="location.href='index.html'">Go to Login/Signup</button>
+  </div>
+</body>
+</html>
