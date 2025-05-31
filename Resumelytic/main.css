@@ -1,0 +1,251 @@
+:root {
+  --primary-color: #1ac6a5;
+  --secondary-color: #35b3db;
+  --dark-color: #2d3748;
+  --light-color: #f7fafc;
+  --danger-color: #e53e3e;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-color);
+  font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  overflow: hidden;
+}
+
+/* Gradient Background */
+.bg-primary-gradient {
+  background: linear-gradient(-45deg, #1e3a8a, #6b21a8, #3b82f6, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo-container {
+  padding: 0.5rem;
+  height: 60px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.col-md-6.col-lg-7 {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 70px);
+  gap: 0.8rem;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.form-control {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  height: 44px;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border-right: none;
+  height: 44px;
+  font-size: 0.95rem;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  height: 44px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #15a58c;
+  border-color: #15a58c;
+}
+
+.social-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.btn-signin {
+  margin-top: 0.5rem;
+}
+
+.social-login {
+  margin: 0.5rem 0;
+}
+
+.signup-link {
+  padding: 1rem 0 0;
+  text-align: center;
+  background: transparent;
+  margin-top: auto;
+  font-size: 0.85rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.hero-content {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.hero-image {
+  max-height: 250px;
+  max-width: 100%;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid.vh-100 {
+  overflow: hidden;
+}
+
+.row.h-100 {
+  min-height: 100%;
+}
+
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .login-wrapper {
+    padding: 1rem;
+    height: calc(100% - 60px);
+  }
+
+  .logo-container {
+    height: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .row.h-100 {
+    flex-direction: column;
+  }
+
+  .col-md-6.col-lg-7,
+  .col-md-6.col-lg-5 {
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-wrapper {
+    width: 95%;
+    padding-top: 1rem;
+  }
+
+  .form-control,
+  .input-group-text,
+  .btn-primary {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .social-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-content img {
+  max-height: 300px;
+  width: auto;
+}
+
+.toggle-password {
+  border-left: none;
+  height: 50px;
+}
+
+.toggle-password:focus {
+  box-shadow: none;
+}
+
+input, button, .btn {
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(53, 179, 219, 0.25);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
